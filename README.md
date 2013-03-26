@@ -1,6 +1,6 @@
 # AVFoundationEditor
 
-This is the companion app to Bob McCune's "<a href="http://www.slideshare.net/bobmccune/learning-avfoundation">Composing and Editing Media with AV Foundation</a>" presentation at CocoaConf.
+This is the companion app to Bob McCune's "<a href="http://www.slideshare.net/bobmccune/composing-and-editing-media-with-av-foundation">Composing and Editing Media with AV Foundation</a>" presentation at CocoaConf.
 
 The demo app is a simple video editing application patterned after iMovie for iOS.  Here's a quick description of its features:
 
