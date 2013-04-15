@@ -440,46 +440,10 @@ typedef enum {
 #pragma mark - Event Handler Methods
 
 - (void)adjustedToWidth:(CGFloat)width {
-	//NSLog(@"Width: %f", width);
 	id <UICollectionViewDelegateTimelineLayout> delegate = (id <UICollectionViewDelegateTimelineLayout>) self.collectionView.delegate;
 	NSIndexPath *indexPath = [self.collectionView indexPathsForSelectedItems][0];
 	[delegate collectionView:self.collectionView didAdjustToWidth:width forItemAtIndexPath:indexPath];
 	[self invalidateLayout];
 }
-
-//NSDictionary *oldAttributes;
-//
-//- (void)prepareForCollectionViewUpdates:(NSArray *)updateItems {
-//	self.updates = updateItems;
-//	NSMutableDictionary *layoutDictionary = [NSMutableDictionary dictionary];
-//	for (UICollectionViewUpdateItem *updateItem in updateItems) {
-//		NSIndexPath *indexPath = updateItem.indexPathAfterUpdate;
-//		if (indexPath) {
-//			UICollectionViewLayoutAttributes *initialAttributes = [UICollectionViewLayoutAttributes layoutAttributesForCellWithIndexPath:indexPath];
-//			UICollectionViewLayoutAttributes *calculatedAttributes = self.calculatedLayout[indexPath];
-//			initialAttributes.frame = calculatedAttributes.frame;
-//			initialAttributes.alpha = 0;
-//			initialAttributes.transform3D = CATransform3DMakeScale(0.5, 0.5, 1);
-//			layoutDictionary[indexPath] = initialAttributes;
-//		}
-//	}
-//	self.initialLayout = layoutDictionary;
-//}
-//
-//- (UICollectionViewLayoutAttributes *)initialLayoutAttributesForAppearingItemAtIndexPath:(NSIndexPath *)itemIndexPath {
-//
-//	NSLog(@"Initail Called");
-//	return self.calculatedLayout[itemIndexPath];;
-//}
-
-//- (UICollectionViewLayoutAttributes *)finalLayoutAttributesForDisappearingItemAtIndexPath:(NSIndexPath *)itemIndexPath {
-//
-//	return self.calculatedLayout[itemIndexPath];
-//}
-//
-//- (void)finalizeCollectionViewUpdates {
-//	//[super finalizeCollectionViewUpdates];
-//	oldAttributes = nil;
-//}
 
 @end
