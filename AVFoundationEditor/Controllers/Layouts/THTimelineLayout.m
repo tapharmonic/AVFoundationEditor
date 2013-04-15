@@ -36,13 +36,14 @@ typedef enum {
 	THDragModeNone = 0,
 	THDragModeMove,
 	THDragModeTrim
-
 } THDragMode;
 
 #pragma mark - Defines
 
 #define DEFAULT_TRACK_HEIGHT 80.0f
 #define DEFAULT_CLIP_SPACING 0.0f
+#define TRANSITION_CONTROL_HW 32.0f
+#define VERTICAL_PADDING 4.0f
 #define DEFAULT_INSETS UIEdgeInsetsMake(4.0f, 5.0f, 5.0f, 5.0f)
 
 #pragma mark - THTimelineLayout Extension
@@ -164,14 +165,14 @@ typedef enum {
 
             attributes.frame = CGRectMake(xPos, yPos + self.trackInsets.top, width, self.trackHeight - self.trackInsets.bottom);
 
-
-			if (width == 32) {
+			// Hacky, revisit
+			if (width == TRANSITION_CONTROL_HW) {
 				CGRect rect = attributes.frame;
-				rect.origin.y += 30;
+				rect.origin.y += ((rect.size.height - TRANSITION_CONTROL_HW) / 2) + VERTICAL_PADDING;
+				rect.origin.x -= (TRANSITION_CONTROL_HW / 2);
 				attributes.frame = rect;
+				attributes.zIndex = 1;
 			}
-
-			//NSLog(@"Frame: %@", NSStringFromCGRect(attributes.frame));
 
 			if ([self.selectedIndexPath isEqual:indexPath]) {
 				attributes.hidden = YES;
@@ -179,7 +180,10 @@ typedef enum {
 
             layoutDictionary[indexPath] = attributes;
 
-			xPos += (width + self.clipSpacing);
+			if (width != TRANSITION_CONTROL_HW) {
+				xPos += (width + self.clipSpacing);
+			}
+
         }
 
 		if (xPos > maxTrackWidth) {
