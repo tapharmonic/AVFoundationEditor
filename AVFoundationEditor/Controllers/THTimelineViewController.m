@@ -192,7 +192,7 @@
 #pragma mark - Build Model States
 
 - (NSArray *)buildVolumeFadesForMusicItem:(THAudioItem *)item {
-	CMTime fadeTime = CMTimeMake(4, 1);
+	CMTime fadeTime = CMTimeMake(3, 1);
 	NSMutableArray *automation = [NSMutableArray array];
 	CMTimeRange startRange = CMTimeRangeMake(kCMTimeZero, fadeTime);
 	[automation addObject:[THVolumeAutomation volumeAutomationWithTimeRange:startRange
