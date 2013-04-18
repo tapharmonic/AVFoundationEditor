@@ -164,7 +164,7 @@
 
 		THTitleLayer *avFoundationLayer = [[THTitleLayer alloc] init];
 		avFoundationLayer.identifier = @"AV Foundation Layer";
-		avFoundationLayer.titleText = @"2013: An AV Odyssey";
+		avFoundationLayer.titleText = @"2013: AVF Extreme";
 		avFoundationLayer.titleImage = [UIImage imageNamed:@"avf_logo_large"];
 		avFoundationLayer.useLargeFont = YES;
 		avFoundationLayer.spinOut = YES;
