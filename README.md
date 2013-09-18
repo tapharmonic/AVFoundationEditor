@@ -1,6 +1,6 @@
 # AVFoundationEditor
 
-### NOTE: This app does not run on iOS 7.
+#### NOTE: This app does not run on iOS 7.  A new ane improved iOS 7-compatible version will be released as part of a book project currently under development.
 
 This is the companion app to Bob McCune's "<a href="http://www.slideshare.net/bobmccune/composing-and-editing-media-with-av-foundation">Composing and Editing Media with AV Foundation</a>" presentation at CocoaConf.
 
