@@ -1,10 +1,10 @@
 # AVFoundationEditor
 
+## This app will not run on iOS 7.
+
 This is the companion app to Bob McCune's "<a href="http://www.slideshare.net/bobmccune/composing-and-editing-media-with-av-foundation">Composing and Editing Media with AV Foundation</a>" presentation at CocoaConf.
 
 ![playback demo](https://raw.github.com/tapharmonic/AVFoundationEditor/master/ScreenShots/AVFoundationEditor.png)
-
-**NOTE:** This demo does not yet work with iOS 7.
 
 The demo app is a simple video editing application patterned after iMovie for iOS.  Here's a quick description of its features:
 
