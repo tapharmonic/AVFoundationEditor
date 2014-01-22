@@ -49,7 +49,8 @@
 	titleTextLayer.fontSize = fontSize;
 	CFRelease(fontRef);
 	UIFont *font = [UIFont fontWithName:@"GillSans-Bold" size:fontSize];
-	CGSize textSize = [self.titleText sizeWithFont:font];
+	CGSize textSize = [self.titleText sizeWithAttributes:@{NSFontAttributeName: font}];
+
 	titleTextLayer.bounds = CGRectMake(0, 0, textSize.width, textSize.height);
 	titleTextLayer.position = CGPointMake(CGRectGetMidX(titleLayer.bounds), 300);
 	titleTextLayer.backgroundColor = [UIColor clearColor].CGColor;

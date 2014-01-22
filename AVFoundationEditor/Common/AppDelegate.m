@@ -41,6 +41,28 @@
 
 	self.mainViewController = (THMainViewController *)self.window.rootViewController;
 
+//	// Change the tabbar's background and selection image through the appearance proxy
+    UIImage *bgImage = [[UIImage imageNamed:@"tb_background"] resizableImageWithCapInsets:UIEdgeInsetsMake(0, 3, 0, 3)];
+    [[THTabBarView appearance] setBackgroundImage:bgImage];
+
+	UIEdgeInsets insets;
+	insets = UIEdgeInsetsZero;
+	UIImage *navbarImage = [[UIImage imageNamed:@"app_navbar_background"] resizableImageWithCapInsets:UIEdgeInsetsMake(0, 3, 0, 3)];
+	[[UINavigationBar appearance] setBackgroundImage:navbarImage forBarMetrics:UIBarMetricsDefault];
+	
+
+//	insets = UIEdgeInsetsMake(10, 10, 10, 10);
+//	UIImage *barButtonImage = [[UIImage imageNamed:@"dark_bar_button_background"] resizableImageWithCapInsets:insets];
+//	[[UIBarButtonItem appearance] setBackgroundImage:barButtonImage forState:UIControlStateNormal barMetrics:UIBarMetricsDefault];
+
+    return YES;
+}
+
++ (AppDelegate *)sharedDelegate {
+	return (AppDelegate *)[UIApplication sharedApplication].delegate;
+}
+
+- (void)prepareMainViewController {
 	self.mainViewController.timelineViewController = [self childViewControllerOfType:[THTimelineViewController class]];
 	self.mainViewController.playerViewController = [self childViewControllerOfType:[THPlayerViewController class]];
 
@@ -54,24 +76,7 @@
 	NSAssert(self.mainViewController.timelineViewController, @"THTimelineViewController not set.");
 	NSAssert(self.mainViewController.playerViewController, @"THPlayerViewController not set.");
 	NSAssert(self.mainViewController.videoPickerViewController, @"THVideoPickerViewController not set.");
-	NSAssert(self.mainViewController.timelineViewController, @"THAudioPickerViewController not set.");
-
-	// Change the tabbar's background and selection image through the appearance proxy
-	UIImage *bgImage = [[UIImage imageNamed:@"tb_background"] resizableImageWithCapInsets:UIEdgeInsetsMake(0, 3, 0, 3)];
-    [[THTabBarView appearance] setBackgroundImage:bgImage];
-
-	UIEdgeInsets insets;
-	insets = UIEdgeInsetsZero;
-	UIImage *navbarImage = [[UIImage imageNamed:@"app_navbar_background"] resizableImageWithCapInsets:UIEdgeInsetsMake(0, 3, 0, 3)];
-	[[UINavigationBar appearance] setBackgroundImage:navbarImage forBarMetrics:UIBarMetricsDefault];
-	
-
-	insets = UIEdgeInsetsMake(10, 10, 10, 10);
-	UIImage *barButtonImage = [[UIImage imageNamed:@"dark_bar_button_background"] resizableImageWithCapInsets:insets];
-	[[UIBarButtonItem appearance] setBackgroundImage:barButtonImage forState:UIControlStateNormal barMetrics:UIBarMetricsDefault];
-
-
-    return YES;
+	NSAssert(self.mainViewController.audioPickerViewController, @"THAudioPickerViewController not set.");
 }
 
 - (id)childViewControllerOfType:(Class)type {

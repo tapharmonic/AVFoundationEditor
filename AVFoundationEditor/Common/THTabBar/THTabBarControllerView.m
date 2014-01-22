@@ -89,7 +89,8 @@
 }
 
 - (void)layoutSubviews {
-	self.tabBarView.frame = CGRectMake(0, self.bounds.size.height - TAB_BAR_HEIGHT, self.bounds.size.width, TAB_BAR_HEIGHT);
+    self.contentView.frame = CGRectMake(0.0f, 0.0f, self.bounds.size.width, self.bounds.size.height - TAB_BAR_HEIGHT);
+	self.tabBarView.frame = CGRectMake(0.0f, self.bounds.size.height - TAB_BAR_HEIGHT, self.bounds.size.width, TAB_BAR_HEIGHT);
 }
 
 @end

@@ -25,8 +25,8 @@
 #import "THSettingsViewController.h"
 #import "THNotifications.h"
 #import "THAppSettings.h"
-#import "THTableSectionHeaderView.h"
 #import "UIView+THAdditions.h"
+#import "THTableSectionHeaderView.h"
 
 #define VIDEO_SECTION	0
 #define EXPORT_ROW		2
@@ -34,15 +34,16 @@
 #define DEMO_SECTION	2
 #define DEMO_ROW		0
 
-#define HEADER_HEIGHT	32
+#define HEADER_HEIGHT	38.0f
 
 @implementation THSettingsViewController
 
 - (void)viewDidLoad {
 	[super viewDidLoad];
 
-	self.tableView.backgroundColor = [UIColor colorWithWhite:0.961 alpha:1.000];
-	self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+    self.tableView.separatorStyle = UITableViewCellSeparatorStyleSingleLine;
+    self.tableView.separatorInset = UIEdgeInsetsZero;
+    self.tableView.backgroundColor = [UIColor whiteColor];
 
 	self.transitionsSwitch.on = [THAppSettings sharedSettings].transitionsEnabled;
 	self.volumeFadesSwitch.on = [THAppSettings sharedSettings].volumeFadesEnabled;
@@ -51,7 +52,7 @@
 }
 
 - (CGSize)contentSizeForViewInPopover {
-	return CGSizeMake(300, 317);
+	return CGSizeMake(300, 320);
 }
 
 - (IBAction)toggleTransitionsEnabledState:(UISwitch *)sender {
@@ -100,14 +101,14 @@
 	return HEADER_HEIGHT;
 }
 
-- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
-	UIImage *bgImage = [[UIImage imageNamed:@"app_cell_background"] resizableImageWithCapInsets:UIEdgeInsetsMake(2, 0, 2, 0)];
-	UIImageView *imageView = [[UIImageView alloc] initWithImage:bgImage];
-	cell.backgroundView = imageView;
-
-	UIImage *bgImageSelected = [[UIImage imageNamed:@"app_cell_background_selected"] resizableImageWithCapInsets:UIEdgeInsetsMake(2, 0, 2, 0)];
-	cell.selectedBackgroundView = [[UIImageView alloc] initWithImage:bgImageSelected];
-}
+//- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
+//	UIImage *bgImage = [[UIImage imageNamed:@"app_cell_background"] resizableImageWithCapInsets:UIEdgeInsetsMake(2, 0, 2, 0)];
+//	UIImageView *imageView = [[UIImageView alloc] initWithImage:bgImage];
+//	cell.backgroundView = imageView;
+//
+//	UIImage *bgImageSelected = [[UIImage imageNamed:@"app_cell_background_selected"] resizableImageWithCapInsets:UIEdgeInsetsMake(2, 0, 2, 0)];
+//	cell.selectedBackgroundView = [[UIImageView alloc] initWithImage:bgImageSelected];
+//}
 
 
 

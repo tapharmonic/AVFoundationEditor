@@ -29,11 +29,11 @@
 - (id)initWithCoder:(NSCoder *)coder {
 	self = [super initWithCoder:coder];
 	if (self) {
-		UIImage *bgImage = [[UIImage imageNamed:@"app_cell_background"] resizableImageWithCapInsets:UIEdgeInsetsMake(2, 0, 2, 0)];
-		self.backgroundView = [[UIImageView alloc] initWithImage:bgImage];
-
-		UIImage *bgImageSelected = [[UIImage imageNamed:@"app_cell_background_selected"] resizableImageWithCapInsets:UIEdgeInsetsMake(2, 0, 2, 0)];
-		self.selectedBackgroundView = [[UIImageView alloc] initWithImage:bgImageSelected];
+//		UIImage *bgImage = [[UIImage imageNamed:@"app_cell_background"] resizableImageWithCapInsets:UIEdgeInsetsMake(2, 0, 2, 0)];
+//		self.backgroundView = [[UIImageView alloc] initWithImage:bgImage];
+//
+//		UIImage *bgImageSelected = [[UIImage imageNamed:@"app_cell_background_selected"] resizableImageWithCapInsets:UIEdgeInsetsMake(2, 0, 2, 0)];
+//		self.selectedBackgroundView = [[UIImageView alloc] initWithImage:bgImageSelected];
 	}
 	return self;
 }

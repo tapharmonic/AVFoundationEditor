@@ -29,7 +29,7 @@
 #import "THTableSectionHeaderView.h"
 #import "UIView+THAdditions.h"
 
-#define HEADER_HEIGHT 32
+#define HEADER_HEIGHT 34.0f
 
 static NSString * const THAudioItemCellID = @"THAudioItemCell";
 
@@ -46,14 +46,14 @@ static NSString * const THAudioItemCellID = @"THAudioItemCell";
 	[super viewDidLoad];
 	self.allAudioItems = @[self.musicItems, self.voiceOverItems];
 
-//	[[NSNotificationCenter defaultCenter] addObserver:self
-//											 selector:@selector(previewComplete:)
-//												 name:THPlaybackEndedNotification
-//											   object:nil];
+	[[NSNotificationCenter defaultCenter] addObserver:self
+											 selector:@selector(previewComplete:)
+												 name:THPlaybackEndedNotification
+											   object:nil];
 	self.previewCompleted = NO;
 
-	self.tableView.backgroundColor = [UIColor colorWithWhite:0.961 alpha:1.000];
-	self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+	self.tableView.separatorStyle = UITableViewCellSeparatorStyleSingleLine;
+    self.tableView.separatorInset = UIEdgeInsetsZero;
 
 }
 

@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12D78" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" initialViewController="2">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5037.3" systemVersion="13B42" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" initialViewController="2">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
+        <deployment defaultVersion="1792" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <scenes>
         <!--Main View Controller-->
@@ -74,32 +75,32 @@
                         <rect key="frame" x="0.0" y="0.0" width="665" height="429"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" id="bty-N0-A4w" userLabel="Progress View" customClass="THExportProgressView">
+                            <view contentMode="scaleToFill" id="d2W-nd-3ay" customClass="THExportProgressView">
                                 <rect key="frame" x="1" y="44" width="664" height="336"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" id="TBs-fj-vIC" customClass="DDProgressView">
-                                        <rect key="frame" x="177" y="164" width="310" height="34"/>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Exporting Video..." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="RjK-tH-UBy">
+                                        <rect key="frame" x="188" y="127" width="289" height="48"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                                    </view>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Exporting Composition" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Xwx-fS-ukB">
-                                        <rect key="frame" x="177" y="115" width="310" height="34"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="28"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="34"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <view contentMode="scaleToFill" id="ziO-Zw-VMZ" customClass="DDProgressView">
+                                        <rect key="frame" x="174" y="195" width="315" height="37"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                    </view>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
-                                    <outlet property="progressView" destination="TBs-fj-vIC" id="o2w-Ce-8bd"/>
+                                    <outlet property="progressView" destination="ziO-Zw-VMZ" id="gDp-tQ-FxN"/>
                                 </connections>
                             </view>
-                            <view contentMode="scaleToFill" id="maY-l9-Tps" customClass="THPlaybackView">
+                            <view contentMode="scaleToFill" id="W4x-Rf-gbM" customClass="THPlaybackView">
                                 <rect key="frame" x="1" y="44" width="664" height="336"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                             <view contentMode="scaleToFill" id="ZHf-sm-oa2" userLabel="Loading View">
                                 <rect key="frame" x="1" y="44" width="664" height="336"/>
@@ -110,14 +111,15 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </activityIndicatorView>
                                 </subviews>
-                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.80000000000000004" colorSpace="calibratedWhite"/>
                             </view>
-                            <navigationBar contentMode="scaleToFill" barStyle="blackOpaque" id="KAl-zt-XHV">
+                            <navigationBar contentMode="scaleToFill" barStyle="black" id="KAl-zt-XHV">
                                 <rect key="frame" x="0.0" y="0.0" width="665" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <items>
                                     <navigationItem title="AV Foundation" id="pbZ-Cc-5wr">
                                         <barButtonItem key="rightBarButtonItem" image="app_settings_icon.png" id="TPc-Yg-HsS">
+                                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <connections>
                                                 <segue destination="xRa-53-sTu" kind="popover" identifier="SettingsPopover" popoverAnchorBarButtonItem="TPc-Yg-HsS" id="rlM-pk-2Hf">
                                                     <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
@@ -131,51 +133,37 @@
                                 <rect key="frame" x="0.0" y="380" width="665" height="49"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="9jR-V4-YxQ">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="9jR-V4-YxQ">
                                         <rect key="frame" x="310" y="2" width="45" height="45"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <inset key="contentEdgeInsets" minX="5" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                        <state key="normal" image="tp_play_icon.png" backgroundImage="tp_round_button.png">
-                                            <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal" image="tp_play_icon.png">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <state key="selected" image="tp_stop_icon.png"/>
-                                        <state key="highlighted">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
                                         <connections>
                                             <action selector="play:" destination="rMf-4V-FaP" eventType="touchUpInside" id="I4f-Xu-xV8"/>
                                         </connections>
                                     </button>
-                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="q9K-lR-tsf">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="q9K-lR-tsf">
                                         <rect key="frame" x="252" y="5" width="40" height="40"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                         <inset key="contentEdgeInsets" minX="0.0" minY="1" maxX="2" maxY="0.0"/>
-                                        <state key="normal" image="tp_rewind_icon.png" backgroundImage="tp_round_button_small.png">
-                                            <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal" image="tp_rewind_icon.png">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <state key="highlighted">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
                                             <action selector="beginRewinding:" destination="rMf-4V-FaP" eventType="touchDown" id="RX8-JB-K8S"/>
                                             <action selector="endRewinding:" destination="rMf-4V-FaP" eventType="touchUpInside" id="dkL-Fo-Tmi"/>
                                         </connections>
                                     </button>
-                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="pgf-iB-PfZ">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="pgf-iB-PfZ">
                                         <rect key="frame" x="373" y="4" width="40" height="41"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                         <inset key="contentEdgeInsets" minX="3" minY="1" maxX="0.0" maxY="0.0"/>
-                                        <state key="normal" image="tp_ff_icon.png" backgroundImage="tp_round_button_small.png">
-                                            <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal" image="tp_ff_icon.png">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <state key="highlighted">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
                                             <action selector="beginFastForwarding:" destination="rMf-4V-FaP" eventType="touchDown" id="1um-Qa-UBQ"/>
@@ -191,10 +179,10 @@
                     </view>
                     <toolbarItems/>
                     <connections>
-                        <outlet property="exportProgressView" destination="bty-N0-A4w" id="N9a-J9-mdR"/>
-                        <outlet property="loadingView" destination="ZHf-sm-oa2" id="q1R-xj-3Lf"/>
+                        <outlet property="exportProgressView" destination="d2W-nd-3ay" id="1Oa-16-9pk"/>
+                        <outlet property="loadingView" destination="ZHf-sm-oa2" id="REo-2x-Nvz"/>
                         <outlet property="playButton" destination="9jR-V4-YxQ" id="YJZ-oh-Sia"/>
-                        <outlet property="playbackView" destination="maY-l9-Tps" id="qej-3B-c4v"/>
+                        <outlet property="playbackView" destination="W4x-Rf-gbM" id="cIx-xd-PnN"/>
                         <outlet property="view" destination="BGX-dl-tTT" id="4Cy-9f-6jr"/>
                     </connections>
                 </viewController>
@@ -347,8 +335,8 @@
         <scene sceneID="0lN-Ek-AJD">
             <objects>
                 <tableViewController title="Videos" id="n2W-jL-nY5" customClass="THVideoPickerViewController" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="fBO-Fc-fWJ">
-                        <rect key="frame" x="0.0" y="0.0" width="360" height="429"/>
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="fBO-Fc-fWJ">
+                        <rect key="frame" x="0.0" y="0.0" width="360" height="449"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
@@ -356,11 +344,10 @@
                             <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="THVideoItemCell" rowHeight="64" id="MqK-8f-qqk" customClass="THVideoItemTableViewCell">
                                 <rect key="frame" x="0.0" y="22" width="360" height="64"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="MqK-8f-qqk" id="Q2u-kF-UP7">
                                     <rect key="frame" x="0.0" y="0.0" width="360" height="63"/>
                                     <autoresizingMask key="autoresizingMask"/>
-                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                </view>
+                                </tableViewCellContentView>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -370,6 +357,7 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Videos" id="BO3-bt-KYE"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="360" height="449"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Abt-TS-J9n" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -379,8 +367,8 @@
         <scene sceneID="hgw-bR-WAA">
             <objects>
                 <tableViewController id="bJK-gv-uq1" customClass="THAudioPickerViewController" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="24" sectionFooterHeight="22" id="xlY-LF-wKs">
-                        <rect key="frame" x="0.0" y="0.0" width="360" height="429"/>
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="24" sectionFooterHeight="22" id="xlY-LF-wKs">
+                        <rect key="frame" x="0.0" y="0.0" width="360" height="449"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
@@ -388,7 +376,7 @@
                             <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="THAudioItemCell" id="gqf-CG-o9K" customClass="THAudioItemTableViewCell">
                                 <rect key="frame" x="0.0" y="24" width="360" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="gqf-CG-o9K" id="UD2-fq-Xg1">
                                     <rect key="frame" x="0.0" y="0.0" width="360" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
@@ -404,7 +392,7 @@
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                             <inset key="contentEdgeInsets" minX="3" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                            <state key="normal" title="Play" image="pv_play_icon.png" backgroundImage="pv_play_button.png">
+                                            <state key="normal" image="pv_play_icon.png" backgroundImage="pv_play_button.png">
                                                 <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
                                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                             </state>
@@ -413,8 +401,7 @@
                                             </state>
                                         </button>
                                     </subviews>
-                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                </view>
+                                </tableViewCellContentView>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
                                     <outlet property="previewButton" destination="vv2-eB-5eM" id="8tI-Se-AE4"/>
@@ -430,6 +417,7 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Audio" id="OaZ-nV-iK5"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="360" height="449"/>
                     <connections>
                         <outlet property="view" destination="xlY-LF-wKs" id="aDE-xC-zDt"/>
                     </connections>
@@ -442,8 +430,8 @@
         <scene sceneID="hZE-OM-sza">
             <objects>
                 <tableViewController id="xRa-53-sTu" customClass="THSettingsViewController" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="static" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="zXX-6v-u5S">
-                        <rect key="frame" x="0.0" y="0.0" width="300" height="320"/>
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="zXX-6v-u5S">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="240"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
@@ -451,21 +439,20 @@
                             <tableViewSection headerTitle="Video" id="HHG-1g-69R">
                                 <cells>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="5B0-UC-CK5">
-                                        <rect key="frame" x="0.0" y="22" width="300" height="44"/>
+                                        <rect key="frame" x="0.0" y="22" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="0.0" y="0.0" width="300" height="43"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="5B0-UC-CK5" id="2Tc-Ta-WHp">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Video Transitions" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="4Zj-vM-KNp">
-                                                    <rect key="frame" x="9" y="10" width="168" height="24"/>
+                                                    <rect key="frame" x="15" y="10" width="168" height="24"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                     <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </label>
                                                 <switch opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" id="A7D-qN-3yM">
-                                                    <rect key="frame" x="215" y="10" width="79" height="27"/>
+                                                    <rect key="frame" x="240" y="6" width="51" height="31"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <color key="onTintColor" red="0.3426353781" green="0.56963468780000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                     <connections>
@@ -473,25 +460,23 @@
                                                     </connections>
                                                 </switch>
                                             </subviews>
-                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                        </view>
+                                        </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="Eq6-if-wtb">
-                                        <rect key="frame" x="0.0" y="66" width="300" height="44"/>
+                                        <rect key="frame" x="0.0" y="66" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="0.0" y="0.0" width="300" height="43"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Eq6-if-wtb" id="POq-52-H9z">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Show Titles" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="amz-om-fML">
-                                                    <rect key="frame" x="9" y="10" width="112" height="24"/>
+                                                    <rect key="frame" x="15" y="10" width="112" height="24"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                     <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </label>
                                                 <switch opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" id="mVu-DY-ggn">
-                                                    <rect key="frame" x="215" y="10" width="79" height="27"/>
+                                                    <rect key="frame" x="240" y="6" width="51" height="31"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <color key="onTintColor" red="0.34263537806974742" green="0.56963468779269144" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                     <connections>
@@ -499,47 +484,43 @@
                                                     </connections>
                                                 </switch>
                                             </subviews>
-                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                        </view>
+                                        </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="gWB-6S-zYd" style="IBUITableViewCellStyleDefault" id="sox-Cd-jgy">
-                                        <rect key="frame" x="0.0" y="110" width="300" height="44"/>
+                                        <rect key="frame" x="0.0" y="110" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="0.0" y="0.0" width="300" height="43"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="sox-Cd-jgy" id="4Xk-SU-7DO">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Export Composition" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="gWB-6S-zYd">
-                                                    <rect key="frame" x="10" y="0.0" width="280" height="43"/>
+                                                    <rect key="frame" x="15" y="0.0" width="290" height="43"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                     <color key="highlightedColor" red="0.27405532529999999" green="0.27405532529999999" blue="0.27405532529999999" alpha="1" colorSpace="calibratedRGB"/>
                                                 </label>
                                             </subviews>
-                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                        </view>
+                                        </tableViewCellContentView>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
                             <tableViewSection headerTitle="Audio" id="u7Q-Wx-eVY">
                                 <cells>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="rim-cP-CUn">
-                                        <rect key="frame" x="0.0" y="176" width="300" height="44"/>
+                                        <rect key="frame" x="0.0" y="176" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="0.0" y="0.0" width="300" height="43"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="rim-cP-CUn" id="yzo-Db-b3x">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Fades &amp; Ducking" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="CLd-RD-hvg">
-                                                    <rect key="frame" x="9" y="10" width="163" height="24"/>
+                                                    <rect key="frame" x="15" y="10" width="163" height="24"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                     <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </label>
                                                 <switch opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" id="UqR-4g-tug">
-                                                    <rect key="frame" x="215" y="10" width="79" height="27"/>
+                                                    <rect key="frame" x="240" y="6" width="51" height="31"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <color key="onTintColor" red="0.3426353781" green="0.56963468780000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                     <connections>
@@ -547,30 +528,7 @@
                                                     </connections>
                                                 </switch>
                                             </subviews>
-                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                        </view>
-                                    </tableViewCell>
-                                </cells>
-                            </tableViewSection>
-                            <tableViewSection headerTitle="Demo States" id="zuA-vd-yow">
-                                <cells>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="63M-RM-qsk">
-                                        <rect key="frame" x="0.0" y="242" width="300" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="0.0" y="0.0" width="300" height="43"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Load Default Composition" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ot2-4K-6jF">
-                                                    <rect key="frame" x="9" y="10" width="294" height="24"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                                    <color key="highlightedColor" red="0.27405532525510201" green="0.27405532525510201" blue="0.27405532525510201" alpha="1" colorSpace="calibratedRGB"/>
-                                                </label>
-                                            </subviews>
-                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                        </view>
+                                        </tableViewCellContentView>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
@@ -585,6 +543,7 @@
                     <nil key="simulatedTopBarMetrics"/>
                     <nil key="simulatedBottomBarMetrics"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="320" height="240"/>
                     <connections>
                         <outlet property="showTitlesSwitch" destination="mVu-DY-ggn" id="GLf-Xm-3K6"/>
                         <outlet property="transitionsSwitch" destination="A7D-qN-3yM" id="RgT-tC-eTO"/>
@@ -593,7 +552,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="g1K-sx-KMX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="796" y="-21"/>
+            <point key="canvasLocation" x="832" y="-5"/>
         </scene>
     </scenes>
     <resources>
@@ -603,134 +562,11 @@
         <image name="tp_ff_icon.png" width="20" height="15"/>
         <image name="tp_play_icon.png" width="22" height="23"/>
         <image name="tp_rewind_icon.png" width="20" height="15"/>
-        <image name="tp_round_button.png" width="45" height="45"/>
-        <image name="tp_round_button_small.png" width="40" height="40"/>
         <image name="tp_stop_icon.png" width="21" height="19"/>
         <image name="trans_btn_bg_xfade.png" width="32" height="32"/>
     </resources>
-    <classes>
-        <class className="DDProgressView" superclassName="UIView">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/DDProgressView.h"/>
-        </class>
-        <class className="THAudioItemCollectionViewCell" superclassName="UICollectionViewCell">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/THAudioItemCollectionViewCell.h"/>
-            <relationships>
-                <relationship kind="outlet" name="itemView" candidateClass="THTimelineItemView"/>
-                <relationship kind="outlet" name="volumeAutomationView" candidateClass="THVolumeAutomationView"/>
-            </relationships>
-        </class>
-        <class className="THAudioItemTableViewCell" superclassName="THLightTableViewCell">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/THAudioItemTableViewCell.h"/>
-            <relationships>
-                <relationship kind="outlet" name="previewButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="titleLabel" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="THAudioPickerViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/THAudioPickerViewController.h"/>
-        </class>
-        <class className="THExportProgressView" superclassName="UIView">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/THExportProgressView.h"/>
-            <relationships>
-                <relationship kind="outlet" name="progressView" candidateClass="DDProgressView"/>
-            </relationships>
-        </class>
-        <class className="THLightTableViewCell" superclassName="UITableViewCell">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/THLightTableViewCell.h"/>
-        </class>
-        <class className="THMainViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/THMainViewController.h"/>
-        </class>
-        <class className="THPlaybackView" superclassName="UIView">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/THPlaybackView.h"/>
-        </class>
-        <class className="THPlayerViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/THPlayerViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="beginFastForwarding:"/>
-                <relationship kind="action" name="beginRewinding:"/>
-                <relationship kind="action" name="endFastForwarding:"/>
-                <relationship kind="action" name="endRewinding:"/>
-                <relationship kind="action" name="play:"/>
-                <relationship kind="outlet" name="exportProgressView" candidateClass="THExportProgressView"/>
-                <relationship kind="outlet" name="loadingView" candidateClass="UIView"/>
-                <relationship kind="outlet" name="playButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="playbackView" candidateClass="THPlaybackView"/>
-            </relationships>
-        </class>
-        <class className="THSettingsViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/THSettingsViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="toggleShowTitlesEnableState:" candidateClass="UISwitch"/>
-                <relationship kind="action" name="toggleTransitionsEnabledState:" candidateClass="UISwitch"/>
-                <relationship kind="action" name="toggleVolumeDuckingEnabledState:" candidateClass="UISwitch"/>
-                <relationship kind="action" name="toggleVolumeFadesEnabledState:" candidateClass="UISwitch"/>
-                <relationship kind="outlet" name="showTitlesSwitch" candidateClass="UISwitch"/>
-                <relationship kind="outlet" name="transitionsSwitch" candidateClass="UISwitch"/>
-                <relationship kind="outlet" name="volumeDuckingSwitch" candidateClass="UISwitch"/>
-                <relationship kind="outlet" name="volumeFadesSwitch" candidateClass="UISwitch"/>
-            </relationships>
-        </class>
-        <class className="THTabBarController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/THTabBarController.h"/>
-        </class>
-        <class className="THTimelineItemCell" superclassName="UICollectionViewCell">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/THTimelineItemCell.h"/>
-            <relationships>
-                <relationship kind="outlet" name="itemView" candidateClass="THTimelineItemView"/>
-            </relationships>
-        </class>
-        <class className="THTimelineItemView" superclassName="UIView">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/THTimelineItemView.h"/>
-            <relationships>
-                <relationship kind="outlet" name="label" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="THTimelineLayout" superclassName="UICollectionViewLayout">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/THTimelineLayout.h"/>
-        </class>
-        <class className="THTimelineViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/THTimelineViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="collectionView" candidateClass="UICollectionView"/>
-            </relationships>
-        </class>
-        <class className="THTransitionButton" superclassName="UIButton">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/THTransitionButton.h"/>
-        </class>
-        <class className="THTransitionCollectionViewCell" superclassName="UICollectionViewCell">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/THTransitionCollectionViewCell.h"/>
-            <relationships>
-                <relationship kind="outlet" name="button" candidateClass="THTransitionButton"/>
-            </relationships>
-        </class>
-        <class className="THTransportView" superclassName="UIView">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/THTransportView.h"/>
-        </class>
-        <class className="THVideoItemCollectionViewCell" superclassName="UICollectionViewCell">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/THVideoItemCollectionViewCell.h"/>
-            <relationships>
-                <relationship kind="outlet" name="itemView" candidateClass="THTimelineItemView"/>
-            </relationships>
-        </class>
-        <class className="THVideoItemTableViewCell" superclassName="UITableViewCell">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/THVideoItemTableViewCell.h"/>
-        </class>
-        <class className="THVideoPickerViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/THVideoPickerViewController.h"/>
-        </class>
-        <class className="THVolumeAutomationView" superclassName="UIView">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/THVolumeAutomationView.h"/>
-        </class>
-        <class className="UICollectionReusableView" superclassName="UIView">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/UICollectionReusableView.h"/>
-        </class>
-        <class className="UICollectionViewCell" superclassName="UICollectionReusableView">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/UICollectionViewCell.h"/>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
-        <simulatedStatusBarMetrics key="statusBar" statusBarStyle="blackTranslucent"/>
+        <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>

@@ -33,15 +33,15 @@
 }
 
 - (void)awakeFromNib {
-	self.layer.cornerRadius = 8.0f;
+	self.layer.cornerRadius = 4.0f;
 	self.layer.borderWidth = 2.0f;
 	self.layer.borderColor = [UIColor colorWithWhite:1.0f alpha:0.25].CGColor;
 }
 
 - (void)setBackgroundColor:(UIColor *)color {
 	[super setBackgroundColor:color];
-	CAGradientLayer *gradientLayer = (CAGradientLayer *)self.layer;
-	gradientLayer.colors = @[(id)[color lighterColor].CGColor, (id)[color darkerColor].CGColor];
+//	CAGradientLayer *gradientLayer = (CAGradientLayer *)self.layer;
+//	gradientLayer.colors = @[(id)[color lighterColor].CGColor, (id)[color darkerColor].CGColor];
 }
 
 @end

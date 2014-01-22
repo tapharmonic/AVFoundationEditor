@@ -45,6 +45,7 @@
 
 @implementation THTimelineViewController
 
+
 - (void)viewDidLoad {
 	[super viewDidLoad];
 
@@ -162,21 +163,21 @@
 		tapHarmonicLayer.timeRange = CMTimeRangeMake(kCMTimeZero, CMTimeMake(3, 1));
 		tapHarmonicLayer.startTimeInTimeline = CMTimeMake(1, 1);
 
-		THTitleLayer *avFoundationLayer = [[THTitleLayer alloc] init];
-		avFoundationLayer.identifier = @"AV Foundation Layer";
-		avFoundationLayer.titleText = @"2013: AVF Extreme";
-		avFoundationLayer.titleImage = [UIImage imageNamed:@"avf_logo_large"];
-		avFoundationLayer.useLargeFont = YES;
-		avFoundationLayer.spinOut = YES;
-		avFoundationLayer.timeRange = CMTimeRangeMake(kCMTimeZero, CMTimeMake(4, 1));
-		avFoundationLayer.startTimeInTimeline = CMTimeMake(55, 10);
+		THTitleLayer *renioLayer = [[THTitleLayer alloc] init];
+		renioLayer.identifier = @"AV Foundation Layer";
+		renioLayer.titleText = @"Renaissance: Master Video";
+		renioLayer.titleImage = [UIImage imageNamed:@"renio"];
+		renioLayer.useLargeFont = YES;
+		renioLayer.spinOut = YES;
+		renioLayer.timeRange = CMTimeRangeMake(kCMTimeZero, CMTimeMake(4, 1));
+		renioLayer.startTimeInTimeline = CMTimeMake(55, 10);
 
 
 		THTimelineItemViewModel *tapHarmonicModel = [THTimelineItemViewModel modelWithTimelineItem:tapHarmonicLayer];
 		tapHarmonicModel.positionInTimeline = THGetOriginForTime(tapHarmonicLayer.startTimeInTimeline);
 
-		THTimelineItemViewModel *avFoundationModel = [THTimelineItemViewModel modelWithTimelineItem:avFoundationLayer];
-		avFoundationModel.positionInTimeline = THGetOriginForTime(avFoundationLayer.startTimeInTimeline);
+		THTimelineItemViewModel *avFoundationModel = [THTimelineItemViewModel modelWithTimelineItem:renioLayer];
+		avFoundationModel.positionInTimeline = THGetOriginForTime(renioLayer.startTimeInTimeline);
 
 		NSMutableArray *items = self.dataSource.timelineItems[THTitleTrack];
 		[items addObject:tapHarmonicModel];

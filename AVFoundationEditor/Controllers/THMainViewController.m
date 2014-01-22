@@ -33,6 +33,7 @@
 #import "THNotifications.h"
 #import <MobileCoreServices/MobileCoreServices.h>
 #import <AssetsLibrary/AssetsLibrary.h>
+#import "AppDelegate.h"
 
 #define SEGUE_ADD_MEDIA_PICKER	@"addMediaPickerViewController"
 #define SEGUE_ADD_PLAYER		@"addPlayerViewController"
@@ -47,12 +48,19 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+	// Wires up child view controller relationships
+	[[AppDelegate sharedDelegate] prepareMainViewController];
+
 	self.factory = [[THCompositionBuilderFactory alloc] init];
 
 	[[NSNotificationCenter defaultCenter] addObserver:self
 											 selector:@selector(exportComposition:)
 												 name:THExportRequestedNotification
 											   object:nil];
+}
+
+- (BOOL)prefersStatusBarHidden {
+	return YES;
 }
 
 - (void)loadMediaItem:(THMediaItem *)mediaItem {

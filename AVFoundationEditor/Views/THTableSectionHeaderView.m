@@ -32,12 +32,7 @@
 - (id)initWithFrame:(CGRect)frame {
 	self = [super initWithFrame:frame];
 	if (self) {
-		UIImage *image = [UIImage imageNamed:@"table_view_header_background"];
-		UIImage *backgroundImage = [image resizableImageWithCapInsets:UIEdgeInsetsMake(1, 1, 1, 1)];
-		UIImageView *imageView = [[UIImageView alloc] initWithFrame:frame];
-		imageView.image = backgroundImage;
-		[self addSubview:imageView];
-
+        self.backgroundColor = [UIColor darkGrayColor];
 		CGRect labelFrame = frame;
 		labelFrame.origin.x = 10.0f;
 		_label = [[UILabel alloc] initWithFrame:labelFrame];
