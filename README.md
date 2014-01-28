@@ -1,6 +1,6 @@
 # AVFoundationEditor
 
-#### NOTE: This app does not run on iOS 7.  A new and improved iOS 7-compatible version will be released as part of my <a href="http://www.bobmccune.com/2013/11/08/learning-av-foundation-book-in-development/">Learning AV Foundation</a> book that currently under development.
+#### <a href="http://www.bobmccune.com/2013/11/08/learning-av-foundation-book-in-development/">Learning AV Foundation</a> is currently under development and a Rough Cut is now available on <a href="http://my.safaribooksonline.com/book/web-applications-and-services/9780133563856">Safari Books Online</a>.
 
 This is the companion app to Bob McCune's "<a href="http://www.slideshare.net/bobmccune/composing-and-editing-media-with-av-foundation">Composing and Editing Media with AV Foundation</a>" presentation at CocoaConf.
 
