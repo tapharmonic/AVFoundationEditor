@@ -79,6 +79,7 @@ static NSString * const THAudioItemCellID = @"THAudioItemCell";
 	[self registerCellActions:cell];
 	THAudioItem *item = self.allAudioItems[indexPath.section][indexPath.row];
 	cell.titleLabel.text = item.title;
+    cell.previewButton.selected = NO;
 	return cell;
 }
 

@@ -79,7 +79,7 @@
 	}
 
 	AVAssetExportSession *session = [[AVAssetExportSession alloc] initWithAsset:[self.composition copy]
-																	 presetName:AVAssetExportPresetHighestQuality];
+																	 presetName:AVAssetExportPreset1280x720];
 	session.audioMix = self.audioMix;
 	session.videoComposition = self.videoComposition; 
 	return session;

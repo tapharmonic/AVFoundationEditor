@@ -137,7 +137,7 @@
 		AVMutableVideoCompositionLayerInstruction *fromLayerInstruction = instructions.fromLayerInstruction;
 		AVMutableVideoCompositionLayerInstruction *toLayerInstruction = instructions.toLayerInstruction;
 
-		if (instructions.transition.type == THVideoTransitionTypeDisolve) {
+		if (instructions.transition.type == THVideoTransitionTypeDissolve) {
 			// Cross Disolve
 			[fromLayerInstruction setOpacityRampFromStartOpacity:1.0 toEndOpacity:0.0 timeRange:timeRange];
 

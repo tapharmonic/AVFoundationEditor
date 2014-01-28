@@ -72,11 +72,13 @@ static const NSString *PlayerItemStatusContext;
 
 #pragma mark - Handle Playback
 
+// Only called when previewing
 - (void)playPlayerItem:(AVPlayerItem *)playerItem {
 	[self.titleView removeFromSuperview];
 	self.autoplayContent = YES;
 	self.player.rate = 0.0f;
 	self.playerItem = playerItem;
+    self.playButton.selected = YES;
 	if (playerItem) {
 		[self prepareToPlay];
 	} else {

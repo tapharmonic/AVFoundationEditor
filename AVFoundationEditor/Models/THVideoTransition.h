@@ -28,7 +28,7 @@ typedef enum {
 	THVideoTransitionTypeNone = 0,
 	THVideoTransitionTypeFadeIn,
 	THVideoTransitionTypeFadeOut,
-	THVideoTransitionTypeDisolve,
+	THVideoTransitionTypeDissolve,
 	THVideoTransitionTypePush
 } THVideoTransitionType;
 

@@ -38,17 +38,19 @@
 }
 
 - (id)initWithTransition:(THVideoTransition *)transition {
-	self = [super initWithStyle:UITableViewStyleGrouped];
+	self = [super initWithStyle:UITableViewStylePlain];
 	if (self) {
 		_transition = transition;
-		self.transitionTypes = @[@"None", @"Disolve", @"Push"];
+		self.transitionTypes = @[@"None", @"Dissolve", @"Push"];
 		self.tableView.showsVerticalScrollIndicator = NO;
+        self.tableView.separatorInset = UIEdgeInsetsZero;
+        self.tableView.scrollEnabled = NO;
 	}
 	return self;
 }
 
-- (CGSize)contentSizeForViewInPopover {
-	return CGSizeMake(200, 150);
+- (CGSize)preferredContentSize {
+	return CGSizeMake(200, 140);
 }
 
 #pragma mark - Table view data source
@@ -62,9 +64,16 @@
 	UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellID];
 	if (!cell) {
 		cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellID];
+        cell.selectionStyle = UITableViewCellSelectionStyleNone;
 	}
 
-	cell.textLabel.text = self.transitionTypes[indexPath.row];
+    NSString *type = self.transitionTypes[indexPath.row];
+	cell.textLabel.text = type;
+    if (self.transition.type == [self transitionTypeFromString:type]) {
+        cell.accessoryType = UITableViewCellAccessoryCheckmark;
+    } else {
+        cell.accessoryType = UITableViewCellAccessoryNone;
+    }
 
 	return cell;
 }
@@ -81,14 +90,19 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
 	NSString *type = self.transitionTypes[indexPath.row];
-	if ([type isEqualToString:@"Disolve"]) {
-		self.transition.type = THVideoTransitionTypeDisolve;
-	} else if ([type isEqualToString:@"Push"]) {
-		self.transition.type = THVideoTransitionTypePush;
-	} else {
-		self.transition.type = THVideoTransitionTypeNone;
-	}
+    self.transition.type = [self transitionTypeFromString:type];
+    [self.tableView reloadData];
 	[self.delegate transitionSelected];
+}
+
+- (THVideoTransitionType)transitionTypeFromString:(NSString *)type {
+	if ([type isEqualToString:@"Dissolve"]) {
+        return THVideoTransitionTypeDissolve;
+	} else if ([type isEqualToString:@"Push"]) {
+		return  THVideoTransitionTypePush;
+	} else {
+		return  THVideoTransitionTypeNone;
+	}
 }
 
 @end

@@ -50,7 +50,7 @@
 	_transitionType = THVideoTransitionTypeNone;
 	self.typeToNameMapping = (@{
 							  @(THVideoTransitionTypeNone) : @"trans_btn_bg_none",
-							  @(THVideoTransitionTypeDisolve) : @"trans_btn_bg_xfade",
+							  @(THVideoTransitionTypeDissolve) : @"trans_btn_bg_xfade",
 							  @(THVideoTransitionTypePush) : @"trans_btn_bg_push"
 							  });
 

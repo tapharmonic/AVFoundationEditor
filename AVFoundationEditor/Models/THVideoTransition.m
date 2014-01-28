@@ -46,7 +46,7 @@
 
 + (id)disolveTransitionWithDuration:(CMTime)duration {
 	THVideoTransition *transition = [self videoTransition];
-	transition.type = THVideoTransitionTypeDisolve;
+	transition.type = THVideoTransitionTypeDissolve;
 	transition.duration = duration;
 	return transition;
 }
