@@ -28,10 +28,6 @@ Animated titles can be enabled from the settings menu.  This demonstrates how to
 ## iOS and Device Support ##
 This is an iPad-only app and requires iOS 7.
 
-## Credits ##
-Application Icons from Turqois' Gemicon set (which are super awesome BTW):
-<a href=“http://gemicon.net”>http://gemicon.net</a>
-
 
 ## Contact ##
 
