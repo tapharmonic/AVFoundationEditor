@@ -179,12 +179,13 @@
 		C4746FE2189758DA0027ED6A /* th_trimmer_ui_highlighted@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C4746FDA189758DA0027ED6A /* th_trimmer_ui_highlighted@2x.png */; };
 		C4746FE3189758DA0027ED6A /* th_trimmer_ui_selected.png in Resources */ = {isa = PBXBuildFile; fileRef = C4746FDB189758DA0027ED6A /* th_trimmer_ui_selected.png */; };
 		C4746FE4189758DA0027ED6A /* th_trimmer_ui_selected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C4746FDC189758DA0027ED6A /* th_trimmer_ui_selected@2x.png */; };
-		C4746FE6189768EB0027ED6A /* 00_Charlie_the_Unicorn.mov in Resources */ = {isa = PBXBuildFile; fileRef = C4746FE5189768EB0027ED6A /* 00_Charlie_the_Unicorn.mov */; };
+		C48B7675189B8A580031CB3A /* 03_Car.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = C48B7674189B8A580031CB3A /* 03_Car.mp4 */; };
+		C48B7678189B99720031CB3A /* 00_Gas.mov in Resources */ = {isa = PBXBuildFile; fileRef = C48B7676189B99720031CB3A /* 00_Gas.mov */; };
+		C48B7679189B99720031CB3A /* 00_Swirl.mov in Resources */ = {isa = PBXBuildFile; fileRef = C48B7677189B99720031CB3A /* 00_Swirl.mov */; };
 		C4C0AE0F171FE5A000EA1F39 /* 01_Open.mov in Resources */ = {isa = PBXBuildFile; fileRef = C4C0AE08171FE5A000EA1F39 /* 01_Open.mov */; };
-		C4C0AE10171FE5A000EA1F39 /* 02_BMX.mov in Resources */ = {isa = PBXBuildFile; fileRef = C4C0AE09171FE5A000EA1F39 /* 02_BMX.mov */; };
-		C4C0AE11171FE5A000EA1F39 /* 03_Skater.mov in Resources */ = {isa = PBXBuildFile; fileRef = C4C0AE0A171FE5A000EA1F39 /* 03_Skater.mov */; };
-		C4C0AE12171FE5A000EA1F39 /* 04_Snowmobile.mov in Resources */ = {isa = PBXBuildFile; fileRef = C4C0AE0B171FE5A000EA1F39 /* 04_Snowmobile.mov */; };
 		C4C0AE13171FE5A000EA1F39 /* 05_Close.mov in Resources */ = {isa = PBXBuildFile; fileRef = C4C0AE0C171FE5A000EA1F39 /* 05_Close.mov */; };
+		C4D8947B189A423E001A18B8 /* 02_Skater.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = C4D89478189A423E001A18B8 /* 02_Skater.mp4 */; };
+		C4D8947D189A423E001A18B8 /* 04_Aerial.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = C4D8947A189A423E001A18B8 /* 04_Aerial.mp4 */; };
 		C4E21EA718905C2E001315F6 /* renio.png in Resources */ = {isa = PBXBuildFile; fileRef = C4E21EA518905C2E001315F6 /* renio.png */; };
 		C4E21EA818905C2E001315F6 /* renio@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C4E21EA618905C2E001315F6 /* renio@2x.png */; };
 		C4F6417A16FAF3BC00C5C089 /* Icon-Small-50.png in Resources */ = {isa = PBXBuildFile; fileRef = C4F6417416FAF3BC00C5C089 /* Icon-Small-50.png */; };
@@ -435,12 +436,13 @@
 		C4746FDA189758DA0027ED6A /* th_trimmer_ui_highlighted@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "th_trimmer_ui_highlighted@2x.png"; path = "AVFoundationEditor/Resources/Images/th_trimmer_ui_highlighted@2x.png"; sourceTree = SOURCE_ROOT; };
 		C4746FDB189758DA0027ED6A /* th_trimmer_ui_selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = th_trimmer_ui_selected.png; path = AVFoundationEditor/Resources/Images/th_trimmer_ui_selected.png; sourceTree = SOURCE_ROOT; };
 		C4746FDC189758DA0027ED6A /* th_trimmer_ui_selected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "th_trimmer_ui_selected@2x.png"; path = "AVFoundationEditor/Resources/Images/th_trimmer_ui_selected@2x.png"; sourceTree = SOURCE_ROOT; };
-		C4746FE5189768EB0027ED6A /* 00_Charlie_the_Unicorn.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = 00_Charlie_the_Unicorn.mov; sourceTree = "<group>"; };
+		C48B7674189B8A580031CB3A /* 03_Car.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = 03_Car.mp4; sourceTree = "<group>"; };
+		C48B7676189B99720031CB3A /* 00_Gas.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = 00_Gas.mov; sourceTree = "<group>"; };
+		C48B7677189B99720031CB3A /* 00_Swirl.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = 00_Swirl.mov; sourceTree = "<group>"; };
 		C4C0AE08171FE5A000EA1F39 /* 01_Open.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = 01_Open.mov; sourceTree = "<group>"; };
-		C4C0AE09171FE5A000EA1F39 /* 02_BMX.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = 02_BMX.mov; sourceTree = "<group>"; };
-		C4C0AE0A171FE5A000EA1F39 /* 03_Skater.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = 03_Skater.mov; sourceTree = "<group>"; };
-		C4C0AE0B171FE5A000EA1F39 /* 04_Snowmobile.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = 04_Snowmobile.mov; sourceTree = "<group>"; };
 		C4C0AE0C171FE5A000EA1F39 /* 05_Close.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = 05_Close.mov; sourceTree = "<group>"; };
+		C4D89478189A423E001A18B8 /* 02_Skater.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = 02_Skater.mp4; sourceTree = "<group>"; };
+		C4D8947A189A423E001A18B8 /* 04_Aerial.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = 04_Aerial.mp4; sourceTree = "<group>"; };
 		C4E21EA518905C2E001315F6 /* renio.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = renio.png; sourceTree = "<group>"; };
 		C4E21EA618905C2E001315F6 /* renio@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "renio@2x.png"; sourceTree = "<group>"; };
 		C4F6417416FAF3BC00C5C089 /* Icon-Small-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small-50.png"; sourceTree = "<group>"; };
@@ -474,11 +476,12 @@
 		C4145D5116F93DEC002AFD67 /* Video */ = {
 			isa = PBXGroup;
 			children = (
-				C4746FE5189768EB0027ED6A /* 00_Charlie_the_Unicorn.mov */,
+				C48B7676189B99720031CB3A /* 00_Gas.mov */,
+				C48B7677189B99720031CB3A /* 00_Swirl.mov */,
 				C4C0AE08171FE5A000EA1F39 /* 01_Open.mov */,
-				C4C0AE09171FE5A000EA1F39 /* 02_BMX.mov */,
-				C4C0AE0A171FE5A000EA1F39 /* 03_Skater.mov */,
-				C4C0AE0B171FE5A000EA1F39 /* 04_Snowmobile.mov */,
+				C4D89478189A423E001A18B8 /* 02_Skater.mp4 */,
+				C48B7674189B8A580031CB3A /* 03_Car.mp4 */,
+				C4D8947A189A423E001A18B8 /* 04_Aerial.mp4 */,
 				C4C0AE0C171FE5A000EA1F39 /* 05_Close.mov */,
 			);
 			path = Video;
@@ -965,6 +968,7 @@
 				C4289A9A16F92A9D00BA04A9 /* InfoPlist.strings in Resources */,
 				C4E21EA718905C2E001315F6 /* renio.png in Resources */,
 				C4289AA216F92A9D00BA04A9 /* Default.png in Resources */,
+				C4D8947B189A423E001A18B8 /* 02_Skater.mp4 in Resources */,
 				C4289AA416F92A9D00BA04A9 /* Default@2x.png in Resources */,
 				C4289AA616F92A9D00BA04A9 /* Default-568h@2x.png in Resources */,
 				C4289AA916F92A9D00BA04A9 /* MainStoryboard.storyboard in Resources */,
@@ -978,6 +982,7 @@
 				C4525E0B16F92BA90064B891 /* app_gray_background.png in Resources */,
 				C4746FDD189758DA0027ED6A /* th_selector_ui_highlighted.png in Resources */,
 				C4525E0C16F92BA90064B891 /* app_gray_background@2x.png in Resources */,
+				C48B7679189B99720031CB3A /* 00_Swirl.mov in Resources */,
 				C4710B4118906110005830D9 /* THTabBarVideo_selected@2x.png in Resources */,
 				C4525E0F16F92BA90064B891 /* app_settings_icon.png in Resources */,
 				C4525E1016F92BA90064B891 /* app_settings_icon@2x.png in Resources */,
@@ -992,6 +997,7 @@
 				C4710B4318906110005830D9 /* THTabBarVideo@2x.png in Resources */,
 				C4525E1916F92BA90064B891 /* avf_logo.png in Resources */,
 				C4525E1A16F92BA90064B891 /* avf_logo@2x.png in Resources */,
+				C48B7675189B8A580031CB3A /* 03_Car.mp4 in Resources */,
 				C4525E1D16F92BA90064B891 /* dark_bar_button_background.png in Resources */,
 				C4525E1E16F92BA90064B891 /* dark_bar_button_background@2x.png in Resources */,
 				C4525E1F16F92BA90064B891 /* dark_button_background.png in Resources */,
@@ -1008,6 +1014,7 @@
 				C4525E2916F92BA90064B891 /* mp_tb_selection.png in Resources */,
 				C4525E2A16F92BA90064B891 /* mp_tb_selection@2x.png in Resources */,
 				C4525E2B16F92BA90064B891 /* pv_play_button.png in Resources */,
+				C48B7678189B99720031CB3A /* 00_Gas.mov in Resources */,
 				C4525E2C16F92BA90064B891 /* pv_play_button@2x.png in Resources */,
 				C4525E2D16F92BA90064B891 /* pv_play_icon.png in Resources */,
 				C4525E2E16F92BA90064B891 /* pv_play_icon@2x.png in Resources */,
@@ -1049,6 +1056,7 @@
 				C4145D8D16F998D3002AFD67 /* tp_rewind_icon.png in Resources */,
 				C4239552189031F0005A37FF /* app_navbar_background.png in Resources */,
 				C4145D8E16F998D3002AFD67 /* tp_rewind_icon@2x.png in Resources */,
+				C4D8947D189A423E001A18B8 /* 04_Aerial.mp4 in Resources */,
 				C4145D8F16F998D3002AFD67 /* tp_round_button_small.png in Resources */,
 				C4145D9016F998D3002AFD67 /* tp_round_button_small@2x.png in Resources */,
 				C4145D9F16F99BF3002AFD67 /* tp_stop_icon.png in Resources */,
@@ -1060,7 +1068,6 @@
 				C4746FE3189758DA0027ED6A /* th_trimmer_ui_selected.png in Resources */,
 				C4710B3D18906110005830D9 /* THTabBarAudio_selected@2x.png in Resources */,
 				C45BA3D016F9B9B600627C66 /* export_progress_img@2x.png in Resources */,
-				C4746FE6189768EB0027ED6A /* 00_Charlie_the_Unicorn.mov in Resources */,
 				C45BA3D116F9B9B600627C66 /* export_progress_track_img.png in Resources */,
 				C45BA3D216F9B9B600627C66 /* export_progress_track_img@2x.png in Resources */,
 				C4746FE2189758DA0027ED6A /* th_trimmer_ui_highlighted@2x.png in Resources */,
@@ -1073,10 +1080,7 @@
 				C4F6417F16FAF3D000C5C089 /* Icon-72.png in Resources */,
 				C4F6418116FAF3DA00C5C089 /* Icon-72@2x.png in Resources */,
 				C4C0AE0F171FE5A000EA1F39 /* 01_Open.mov in Resources */,
-				C4C0AE10171FE5A000EA1F39 /* 02_BMX.mov in Resources */,
-				C4C0AE11171FE5A000EA1F39 /* 03_Skater.mov in Resources */,
 				C4710B4018906110005830D9 /* THTabBarVideo_selected.png in Resources */,
-				C4C0AE12171FE5A000EA1F39 /* 04_Snowmobile.mov in Resources */,
 				C4C0AE13171FE5A000EA1F39 /* 05_Close.mov in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

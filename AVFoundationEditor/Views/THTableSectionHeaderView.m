@@ -32,7 +32,7 @@
 - (id)initWithFrame:(CGRect)frame {
 	self = [super initWithFrame:frame];
 	if (self) {
-        self.backgroundColor = [UIColor darkGrayColor];
+        self.backgroundColor = [UIColor colorWithWhite:0.298 alpha:1.000];
 		CGRect labelFrame = frame;
 		labelFrame.origin.x = 10.0f;
 		_label = [[UILabel alloc] initWithFrame:labelFrame];
