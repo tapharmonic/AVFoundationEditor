@@ -144,7 +144,7 @@
 }
 
 - (void)setSelectedIndex:(NSUInteger)index {
-    NSAssert1(index <= [self.tabBarItems count], @"%i is an invalid index.", index);
+    NSAssert1(index <= [self.tabBarItems count], @"%lu is an invalid index.", (unsigned long)index);
 
     UIViewController *viewController = [[self.tabBarItems objectAtIndex:index] controller];
     [self setSelectedViewController:viewController];

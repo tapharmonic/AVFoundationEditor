@@ -207,7 +207,7 @@ static NSString * const THAudioItemCollectionViewCellID		= @"THAudioItemCollecti
 - (void)collectionView:(UICollectionView *)collectionView didMoveMediaItemAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
 	NSMutableArray *items = self.timelineItems[fromIndexPath.section];
 	if (fromIndexPath.item == toIndexPath.item) {
-		NSLog(@"FUBAR:  Attempting to move: %i to %i.", fromIndexPath.item, toIndexPath.item);
+		NSLog(@"FUBAR:  Attempting to move: %li to %li.", (long)fromIndexPath.item, (long)toIndexPath.item);
 		NSAssert(NO, @"Attempting to make invalid move.");
 	}
 	[items exchangeObjectAtIndex:fromIndexPath.item withObjectAtIndex:toIndexPath.item];

@@ -153,7 +153,7 @@
 	NSUInteger count = 0;
 	do {
 		filePath = NSTemporaryDirectory();
-		NSString *numberString = count > 0 ? [NSString stringWithFormat:@"-%i", count] : @"";
+		NSString *numberString = count > 0 ? [NSString stringWithFormat:@"-%li", (unsigned long)count] : @"";
 		filePath = [filePath stringByAppendingPathComponent:[NSString stringWithFormat:@"Masterpiece-%@.m4v", numberString]];
 		count++;
 	} while([[NSFileManager defaultManager] fileExistsAtPath:filePath]);
