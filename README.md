@@ -1,8 +1,8 @@
 # AVFoundationEditor
 
-#### <a href="http://www.bobmccune.com/2013/11/08/learning-av-foundation-book-in-development/">Learning AV Foundation</a> is currently under development and a Rough Cut is now available on <a href="http://my.safaribooksonline.com/book/web-applications-and-services/9780133563856">Safari Books Online</a>.
+#### <a href="http://www.learningavfoundation.com">Learning AV Foundation</a> is now available.
 
-This is the companion app to Bob McCune's "Mastering Video" presentation at Renaissance 2014.
+This project has been superceded by the version found in the book's <a href="https://github.com/tapharmonic/Learning-AV-Foundation">sample code library</a>.
 
 ![playback demo](https://raw.github.com/tapharmonic/AVFoundationEditor/master/ScreenShots/AVFoundationEditor.jpg)
 
